@@ -1,0 +1,16 @@
+// Topics Covered
+
+event propagation
+event bubbling
+event.currentTarget vs event.target
+event capturing/ trickling
+event delegation
+
+// Ref: 
+
+1. https://www.youtube.com/watch?v=rS_4YfbEo2U&list=PLKhlp2qtUcSaCVJEt4ogEFs6I41pNnMU5&index=11
+2. https://www.youtube.com/watch?v=3KJI1WZGDrg
+3. https://www.freecodecamp.org/news/event-bubbling-in-javascript/
+4. https://www.freecodecamp.org/news/manage-default-behavior-in-browser/   
+5. https://www.freecodecamp.org/news/event-delegation-javascript/
+6. https://javascript.info/bubbling-and-capturing
