@@ -1,0 +1,17 @@
+1. 
+parseInt("5.89") => 5, parseInt("5abc") => 5
+Number("5.89") => 5.89, Number("5abc") => NaN
+
+2.
+typeof NaN is Number.
+Not a Number (NaN), is a particular value of a numeric data type (often a floating-point number) 
+which is undefined or unrepresentable, such as the result of 0/0.
+
+3.
+typeof null is Object
+
+4. 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment
+
+-> If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
+-> If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing.
