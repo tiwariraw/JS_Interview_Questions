@@ -15,3 +15,51 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Incr
 
 -> If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
 -> If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing.
+
+5.
+Primitive types (number, string, boolean, null, undefinded, symbol, bigint) are passed by value.
+
+Non primitive types (array,object,function) are passed by reference
+
+6.
+const id1 = '123';
+const id2 = '123';
+console.log(id1 === id2); //true
+
+const id1 = Symbol('123');
+const id2 = Symbol('123');
+console.log(id1 === id2); // false
+
+6. 
+JavaScript is a dynamically typed language. This means that variable types are determined at runtime, 
+and you do not need to explicitly declare the type of a variable before using it. You can assign different types of values to a variable during its lifetime.
+
+**Return type of variables in JavaScript
+A. Primitive Datatypes
+       Number => number
+       String  => string
+       Boolean  => boolean
+       null  => object ⬅️
+       undefined  =>  undefined
+       Symbol  =>  symbol
+       BigInt  =>  bigint
+
+B. Non-primitive Datatypes
+       Arrays  =>  object
+       Function  =>  function ⬅️
+       Object  =>  object
+
+7.
+Primitive values are created inside stack => (value is copied)
+Non-Primitive values are created inside heap => (reference is passed)
+
+8. 
+Syntax: str1.split(separator,limit);
+
+const name = 'Ashish Kumar Tiwari';
+
+console.log(name.split(' ', 2)); // ['Ashish', 'Tiwari']
+                            ⬆ limit
+
+9. 
+

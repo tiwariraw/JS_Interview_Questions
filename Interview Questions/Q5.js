@@ -1,25 +1,28 @@
-// navigator.clipboard API
+// comparing 2 different data types (unpredictable results) => try to avoid these of comparisions
 
-const writeToClipboard = async () => {
-    try {
-        const userText = prompt('Enter a text: ', '');
-        await navigator.clipboard.writeText(userText);
-        console.log('Text copied to theh clipboard');
-    } catch (err) {
-        console.error(err);
-    }
-};
+console.log("2" > 1); // true
+console.log("02" > 1); // true
 
-const readFromClipboard = async () => {
-    try {
-        const clipboardText = await navigator.clipboard.readText();
-        console.log(clipboardText);
-    } catch (err) {
-        console.error(err);
-    }
-};
+console.log('-----------');
 
-writeToClipboard();
-readFromClipboard();
 
-// Ref: https://stackoverflow.com/questions/56306153/domexception-on-calling-navigator-clipboard-readtext
+/* 
+The reason is quality check operator (== or ===) and comparision 
+operators (>, >=, <, <=) works differently.
+Comparision operators convert null to a number, treating it as 0.
+*/
+console.log(null > 0); // false
+console.log(null == 0); // false
+console.log(null === 0); // false
+console.log(null > 0); // true ⬅️
+console.log(null >= 0); // true
+
+console.log('-----------');
+
+
+console.log(undefined == 0); // false
+console.log(undefined === 0); // false
+console.log(undefined > 0); // false
+console.log(undefined >= 0); // false
+console.log(undefined < 0); // false
+console.log(undefined <= 0); // false
