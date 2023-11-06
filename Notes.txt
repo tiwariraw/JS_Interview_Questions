@@ -62,4 +62,105 @@ console.log(name.split(' ', 2)); // ['Ashish', 'Tiwari']
                             ⬆ limit
 
 9. 
+console.log(Array.from({name: 'ashish'})); // []
+
+10.
+let a = 1;
+let b = 2;
+let c = 3;
+
+console.log(Array.of(a, b, c));
+
+11.
+const obj1 = {
+    'name': 'ashish',
+    'age': 25,
+}
+
+// The Object.create() static method creates a new object, using an existing object as the prototype of the newly created object.
+const obj2 = Object.create(obj1);
+
+console.log(obj1);
+console.log(obj2); // {}
+
+console.log(obj2.name); // ashish
+obj2.name = 'Dhimesh';
+console.log(obj2.name); // Dhimesh
+
+12.
+JS arrays are actually objects.
+
+const fruits = ['orange', 'banana', 'guava'];
+
+fruits.name = 'ashish';
+
+console.log(fruits); // check this fruits array in console
+
+13.
+// Use symbol as a key in an object
+
+const myKey1 = Symbol('key1');
+
+const obj = {
+    'name': 'ashish',
+    [myKey1]: 'waah',
+}
+
+console.log(obj);
+
+//accessing symbol key value
+
+console.log(obj[myKey]); // waah
+console.log(obj.myKey1); // undefinded
+
+14.
+https://javascript.plainenglish.io/object-freeze-vs-object-seal-vs-object-preventextensions-e78ef3a24201
+
+const obj1 = {
+    'name': 'ashish',
+    'age': 25,
+    vehicle: {
+        'vname': 'Audi',
+        price: 1000,
+    }
+}
+
+Object.freeze(obj1);
+
+obj1.name = 'Dhimesh'; // modify
+obj1.city = 'BMW'; // add
+delete obj1.age; // delete
+obj1.vehicle.price = 5500000; // this is valid
+
+console.log(obj1);
+
+15.
+https://www.w3schools.com/js/js_function_bind.asp
+
+16.
+https://blog.hubspot.com/website/application-programming-interface-api
+
+17.
+Context is always the value of the this keyword which is a reference to the object that “owns” the currently executing code or the function where it's looked at
+
+18.
+// implicit return in arrow function having only one statement in function body
+const f1 = (a, b) => a + b;
+// or -> its better to wrap in a parentheses
+const f2 = (a, b) => (a + b);
+
+
+/*** If you want to return an object ***/
+
+const f3 = () => { name: 'ashish' };
+console.log(f3()); // undefined
+
+// Soln: use parantheses
+const f4 = () => ({ name: 'ashish' });
+console.log(f4()); // {name: 'ashish'}
+
+19.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping
+
+20.
 
