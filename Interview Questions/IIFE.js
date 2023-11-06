@@ -41,7 +41,7 @@ goodbye();
 
 // 2.
 
-// Problem: We'll get an error (TypeError: (intermediate value)(...) is not a function) and this error is due to ASI (yaha pe at line 47, JS Engine automatically semicolon nahi insert karega jabki aage parse
+// Problem: We'll get an error (TypeError: (intermediate value)(...) is not a function) and this error is due to ASI (yaha pe at line 48, JS Engine automatically semicolon nahi insert karega jabki aage parse
 // karne ki koshish karega jisase error aayega)
 (function () {
     console.log('Hello World');
