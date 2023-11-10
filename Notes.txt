@@ -163,4 +163,182 @@ console.log(f4()); // {name: 'ashish'}
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping
 
 20.
+Falsy values in JS: 
+    false, 0, -0, 0n, '', null, undefined, NaN
 
+Rest every value is truthy value.
+Some truthy values which may surprise you: 
+    '0', 'false', ' ', [], {}, function(){},   
+
+21. 
+false == 0; // true
+false == ''; // true
+0 == ''; // true
+
+22.
+let val1 = null ?? 100;
+console.log(val1); // 100
+
+let val1 = undefined ?? 100;
+console.log(val1); // 100
+
+let val1 = null ?? 10 ?? 20;
+console.log(val1); // 10
+
+const user = { 
+    'name': 'ashish',
+}
+
+const value = user?.vehicle ?? 'Audi'
+
+console.log(value);
+
+23.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+24. 
+***textContent vs innerText vs innerHTML***
+
+<h1 id='heading'>Namaste JavaScript <span style="display: none;">Waah guruji</span><h1>
+
+const heading = document.getElementById('heading');
+heading.textContent; // Namaste JavaScript Waah guruji
+heading.innerText; // Namaste JavaScript
+heading.innerHTML; // Namaste JavaScript <span style="display: none;">Waah guruji</span>
+
+// DIY
+heading.innerHTML = "<p class='para'>A paragraph</p>";
+heading.textContent = "<p class='para'>A paragraph</p>";
+heading.innerText = "<p class='para'>A paragraph</p>";
+console.log(heading);
+
+25.
+htmlcollection vs nodelist
+ 
+26.
+const div1 = document.querySelector('.container');
+div1.innerText = 'Namaste JavaScript';
+// OR
+div.appendChild(document.createTextNode('Namaste JavaScript'));
+
+/* +++++++++++++++++++++++++ */
+const div = document.querySelector('.container');
+
+
+function createNewElement(elem, text, whereToAppend) {
+    const element = document.createElement(elem);
+    element.innerHTML = text;
+    whereToAppend.appendChild(element);
+}
+
+createNewElement('h5', 'ram ram sabko', div);
+createNewElement('h1', 'gazab', div);
+
+27.
+<h1>Color Changer</h1>
+<div class="container">
+    <p class="box" id="grey"></p>
+    <p class="box" id="white"></p>
+    <p class="box" id="blue"></p>
+    <p class="box" id="yellow"></p>
+</div>
+    
+    const container = document.querySelector('.container');
+
+// event delegation (achieved using the concept of event bubbling)
+container.addEventListener('click', (event) => {
+    if (event.target.tagName === 'P') {
+        document.body.style.backgroundColor = event.target.id;
+    }
+})
+
+28.
+input.value returns a string type value
+
+29.
+new Date().toLocaleTimeString();
+'6:12:49 PM'
+
+30.
+// ul -> li -> img
+// Task: remove the image when user clicks on it
+
+    <ul class="images">
+        <li>
+            <img 
+            width="100px" 
+            height="100px"
+            src="https://images.unsplash.com/photo-1697947656193-a87d460b5fb5?q=80&w=912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+        </li>
+    </ul>
+
+    document.querySelector('.images').addEventListener('click', (e) => {
+    // console.log(e.target.parentNode);
+    if (e.target.tagName === 'IMG') {
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+    }
+})
+
+31.
+// Important event properties:
+// type,target, currentTarget, clientX, clientY
+// timeStamp, defaultPrevented, srcElement, altKey, ctrlKey, shiftKey
+// key, keycode, code  <--- for keyboard events
+
+eg. 
+
+//    <table border="1px">
+//         <tr>
+//             <th>Key</th>
+//             <th>Keycode</th>
+//             <th>Keycodecode</th>
+//         </tr>
+//         <tr>
+//             <td id="key">press a key</td>
+//             <td id="keycode">press a key</td>
+//             <td id="code">press a key</td>
+//         </tr>
+//     </table> 
+
+const keyEl = document.getElementById('key');
+const keycodeEl = document.getElementById('keycode');
+const codeEL = document.getElementById('code');
+
+window.addEventListener('keypress', (e) => {
+    keyEl.innerHTML = e.key === ' ' ? 'space' : e.key;
+    keycodeEl.innerHTML = e.keyCode; // keyCode is deprecated
+    codeEL.innerHTML = e.code;
+})
+
+32.
+https://www.w3schools.com/jsref/dom_obj_event_prop.asp
+https://www.w3schools.com/jsref/obj_event.asp
+
+33.
+https://www.browserstack.com/guide/browser-rendering-engine#:~:text=3.-,Rendering%20Engine,displayed%20on%20the%20user%20interface
+
+34.
+/*
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+*/
+
+const startBtn = document.getElementById('start');
+const stopBtn = document.getElementById('stop');
+
+let intervalId;
+let counter = 0;
+
+startBtn.addEventListener('click', (e) => {
+    intervalId = setInterval(() => {
+        console.log('Namaste JavaScript', ++counter);
+    }, 1000);
+})
+
+stopBtn.addEventListener('click', (e) => {
+    clearInterval(intervalId);
+})
+
+35.

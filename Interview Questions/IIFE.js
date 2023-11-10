@@ -21,7 +21,7 @@ function goodbye() {
 goodbye();
 
 
-// this IIFE greet is not attached tow indow object, hence it avoids pollution global namespace
+// this IIFE greet is not attached to window object, hence it avoids pollution global namespace
 (function greet() {
     console.log('Hola gola');
 })();
