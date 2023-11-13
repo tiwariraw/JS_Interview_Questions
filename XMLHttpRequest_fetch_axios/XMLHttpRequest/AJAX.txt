@@ -1,0 +1,17 @@
+// AJAX stands for asynchronous JavaScript and XML.
+
+// AJAX is not a technology itself, but rather an approach to using a
+// number of existing technologies together, including HTML, CSS, JS, DOM, XML,
+// and most importantly the XMLHttpRequest object
+
+// AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+
+// AJAX helps in fetching data asynchronously without interfering with the existing page
+
+// No page reload/ refresh
+
+// Despite having the word “XML” in its name, it can operate on any data, not only in XML format.
+// Modern websites uses JSON instead of XML for data transfer.
+
+// AJAX uses an XMLHttpRequest object to get(and send) data from the seerver.
+// Data can be transferred in any format or protocol (not always https neccessarily)
