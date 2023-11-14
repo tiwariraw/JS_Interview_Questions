@@ -1,0 +1,73 @@
+// Ref: 
+1. https://www.youtube.com/watch?v=l50gnBWHmdA&list=PLIJrr73KDmRwNZAYsAmWV8HXrPju73emb&index=21 (tapas)
+2. https://www.w3schools.com/js/js_modules.asp
+3. Modules (3 parts) <-- javascript.info
+4. https://blog.logrocket.com/commonjs-vs-es-modules-node-js/
+5. https://dev.to/lico/how-to-import-and-export-in-commonjs-and-es-modules-43m1
+  
+  
+/*********** Explanation ***********/
+
+Module: 
+ -> JavaScript modules allow you to break up your code into separate JS files. 
+ -> more organized code
+ -> code reusability
+ -> no naming conflict
+
+1. There are 2 types of modules used in JavaScript: 
+  a. CommonJS modules
+  b. ES6 modules
+
+/*********** ES6 modules ***********/
+
+2. For using import and export, when including your script in html file, add the below attribute:
+  type: "module"
+Otherwise, you'll get "Uncaught SyntaxError: Cannot use import statement outside a module"
+
+3. When importing from a JS module, write as below:
+
+import {nums} from './module1.js' 
+
+If you write just './module1' without including .js extension, you'll get an error:
+"GET http://127.0.0.1:5500/module1 net::ERR_ABORTED 404 (Not Found)"
+
+4. There are 2 types of export:
+  a. named export 
+  b. default export:
+     -> There can be only one default export which will be exported by default.
+        If you default export a function f1, then in another module, if you try 
+        to import anything which is not present in the module which is exported, 
+        then this default exported will be exported.
+
+5. There are 2 types of import:
+  a. named import: use destructuring syntax ( {} ) for importing any named exports
+  b. default import: can import directly i.e. w/o using destructuring syntax
+    
+    import defaultFn from './module1.js';
+    OR
+    import {default as defaultFn} from './module1.js';
+
+6. exporting in a single line:
+    const num = 5;
+    const sum = (a,b) => a+b;
+
+    export {num,sum}
+
+7. Aliases
+import {nums as numbers, add as additionFn} from './module1.js'
+
+8. Namespaces in module (importing everything from a module)
+
+import * as module1 from './module1.js';
+
+console.log(module1.nums);
+console.log(module1.add(1, 2, 3));
+
+9. Combined export 
+
+10. dynamic import 
+
+/*********** CommonJS modules ***********/
+
+1. module.exports = {nums, add}
+2. const mod1 = require('./module1.js')

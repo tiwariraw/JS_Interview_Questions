@@ -437,3 +437,58 @@ console.log(obj3.key1); // value1
 */
 
 39.
+class User {
+    constructor() {
+        this.name = 'demo';
+    }
+
+    get name() {
+        return this.name;
+    }
+
+    set name(newName) {
+        this.name = newName;
+    }
+}
+
+const user1 = new User();
+
+// How a setter method is used to set a value:
+user1.name = 'Hitesh';
+
+// The above line calls the setter method and passes 'Hitesh' as an argument which 
+// is received in the 'newName' parameter of the setter method.
+
+// In the constructor, when the line: this.name = 'demo' is encountered,
+// it calls the setter by passing 'demo' as an argument (the value of newName parameter is now 'demo').
+// In the setter method, the line: this.name = newName again calls the same setter method i.e. calls itself again and again
+// causing an infinite recursion.
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion
+
+40.
+// Writing getter and setter in constructor function
+
+// https://www.youtube.com/watch?v=t6vLhF-iSxQ&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=48
+// https://javascript.info/property-accessors
+
+function User(email) {
+    this._email = email;
+
+    Object.defineProperty(this, 'email', {
+        get: function () {
+            return this._email;
+        },
+        set: function (newEmail) {
+            this._email = newEmail;
+        }
+    })
+}
+
+const user1 = new User('ashishiit9@gmail.com');
+console.log(user1.email); // here, we are calling the getter for _email property
+
+user1.email = 'demo@gmail.com'; // here, we are calling the setter for _email property
+console.log(user1.email);
+
+41.
