@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#play-btn,
+#pause-btn {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.5rem;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+input[type='range'] {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 400px;
+    height: 1px;
+}

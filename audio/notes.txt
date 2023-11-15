@@ -1,0 +1,6 @@
+// Ref:
+
+1. https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement
+2. https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+3. https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event
+4. https://www.developerdrive.com/manipulating-html5s-native-audio-with-javascript/
