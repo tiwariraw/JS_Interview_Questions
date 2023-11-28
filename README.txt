@@ -15,3 +15,9 @@
 #Extras:
 
 1. https://github.com/sudheerj/javascript-interview-questions
+
+
+***************************
+https://sonikamaheshwari067.medium.com/frontend-roadmap-3bb7d3a972ea
+preplaced: Sonika Maheshwari (mentorship)
+***************************

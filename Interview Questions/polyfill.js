@@ -137,7 +137,7 @@ Function.prototype.myCall = function (context, ...args) {
     context.fn(...args);
 
     /*
-   What line 128 and 129 means (See above how we are modifying the user object)
+   What line 136 and 137 means (See above how we are modifying the user object)
    const user = {
     'name': 'Ashish Tiwari',
     fn: function(param1){

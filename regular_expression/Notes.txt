@@ -1,0 +1,9 @@
+1. Telusko JS Playlist by Tanmay (#26 - #31)
+2. https://www.youtube.com/watch?v=ZfQFUJhPqMM (freecodecamp) 
+3. Beyond code Regex(Playlist + Book)
+4. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
+
+// Practise:
+
+1. freecode JS DSA certification (RegEx part)
+2. Asabeneh 30 days JS (RegEx part)

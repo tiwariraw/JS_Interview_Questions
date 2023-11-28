@@ -491,4 +491,45 @@ console.log(user1.email); // here, we are calling the getter for _email property
 user1.email = 'demo@gmail.com'; // here, we are calling the setter for _email property
 console.log(user1.email);
 
-41.
+41. Read about 'mixins' in JavaScript from javascript.info website
+
+42. Refer Q14.js in Interview_Questions
+
+let num = 60;
+
+decimal to binary => num.toString(2);
+decimal to octal => num.toString(8);
+decimal to hexadecimal => num.toString(16);
+
+hexadecimal to decimal => parseInt(hexString,16)
+
+43.
+// Check if all the elements of the array are of same type
+
+const nums = [2, 4, 6, 8, 10];
+
+const output = nums.every(num => {
+    return typeof num === 'number';
+})
+
+console.log(output);
+
+44.
+// Whenever we sort objects in an array, we use the object key to compare
+
+const users = [
+    { name: 'Asabeneh', age: 150 },
+    { name: 'Brook', age: 50 },
+    { name: 'Eyob', age: 100 },
+    { name: 'Elias', age: 22 },
+]
+
+users.sort(function (a, b) {
+    return a.age - b.age
+});
+
+console.log(users);
+
+45.
+/********************** Asabeneh 30 days JS **********************/
+
