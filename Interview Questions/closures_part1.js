@@ -28,7 +28,7 @@ for (var i = 1; i <= 5; i++) {
 
 // Solution
 // 1. use let (as it has block scope)
-for (var i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
     setTimeout(() => {
         console.log(i);
     }, i * 1000);
